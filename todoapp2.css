@@ -1,0 +1,174 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* for setting background image*/
+body{
+  background-image: url(codecave1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px;
+  height: 100vh;
+  background-image: fixed;
+}
+/* for task background color*/
+.wrapper{
+  max-width: 405px;
+  padding: 15px 0 30px;
+  margin: 40px auto;
+  background:linear-gradient(135deg,#f3f4f6a3,#25a18477) ;
+  border-radius: 7px;
+}
+/*input path and size of the path*/
+.task-input{
+  height: 52px;
+  padding: 0 25px;
+  position: relative;
+} 
+/* setting color and size for (Add task and type enter )*/
+.task-input input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 0 20px 0 53px;
+  border: 1px solid #080808;
+}
+/*corner for the text input color*/
+.task-input input::placeholder{
+  color: #080808;
+}
+/*position specifing for controls*/
+.controls, li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls{
+  padding: 18px 25px;
+  border-bottom: 3px solid #0b0b0b;
+}
+/*back ground color for buttons*/
+.filters span{ 
+  margin: 0 10px;
+  font-size: 15px;
+  padding: 3px 5px;
+  border-radius: 4px;
+  transition: transform 0.25s ease;
+  background: linear-gradient(360deg,#abbcf1,#06f6b6) ;
+  cursor: pointer;
+}
+/* color for selected button*/
+.filters span.active{
+  color: #ffffff;
+}
+/* setting for clear all button*/
+.controls .clear-btn{
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+  font-weight: bold;
+  background: linear-gradient(135deg, #092b45 , #2D5CFE 100%);
+}
+/*action for clear all button*/
+.clear-btn.active{
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.clear-btn:active{
+  transform: scale(0.93);
+}
+.task-box{
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+  
+}
+/*for increasing size of task box when enter more tasks*/
+.task-box.overflow{
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.task-box::-webkit-scrollbar{
+  width: 5px;
+}
+.task-box::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.task-box::-webkit-scrollbar-thumb{
+  background: #e6e6e6;
+  border-radius: 25px;
+}
+/*line between the tasks*/
+.task-box .task{
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #efe2e2;
+}
+.task-box .task label{
+  display: flex;
+  align-items: flex-start;
+}
+.task label input{
+  margin-top: 7px;
+  accent-color: #4cf422;
+}
+/*completed task cross mark*/
+.task label p{
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+.task label p.checked{
+  text-decoration: line-through;
+}
+.task-box .settings{
+  position: relative;
+}
+/*positons and color for edit and delete button*/
+.settings .task-menu{
+  z-index: 10;
+  right: -5px;
+  background: #6a9ab38f;
+  border-radius: 4px;
+  transform-origin: top right;
+  transition: transform 0.2s ease;
+}
+.task-box .task:last-child .task-menu{
+  bottom: 0;
+  transform-origin: bottom right;
+}
+.task-box .task:first-child .task-menu{
+  bottom: -65px;
+  transform-origin: top right;
+}
+.task-menu li{
+  height: 10px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 10px 5px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+.settings li:hover{
+  background: #cc6666;
+}
+
+
+
